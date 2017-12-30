@@ -1,0 +1,13 @@
+name: dirwatch
+version: 0.1.0
+
+authors:
+  - Nicolas Ganz <nicolas@keltec.ch>
+
+targets:
+  dirwatch:
+    main: src/dirwatch.cr
+
+crystal: 0.24.1
+
+license: MIT
