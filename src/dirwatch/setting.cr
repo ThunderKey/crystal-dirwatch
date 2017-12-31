@@ -20,6 +20,7 @@ class Dirwatch::Setting
   #   script: "echo file changed >> txt.log"
   #
   # my-task-2:
+  #   interval: 5
   #   directory: folder/to/csv/files
   #   file_match: "*.csv"
   #   script:
@@ -41,7 +42,7 @@ class Dirwatch::Setting
   #     @key="my-task-2",
   #     @directory="folder/to/csv/files",
   #     @file_match="*.csv",
-  #     @interval=2.0,
+  #     @interval=5.0,
   #     @scripts=["echo CSV >> csv.log", "echo file changed >> csv.log"]
   #   >
   # ]
