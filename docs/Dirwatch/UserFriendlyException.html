@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/ThunderKey/crystal-dirwatch">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <title>Dirwatch::UserFriendlyException - github.com/ThunderKey/crystal-dirwatch</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/ThunderKey/crystal-dirwatch/Dirwatch" data-name="dirwatch">
+      <a href="../Dirwatch.html">Dirwatch</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="github.com/ThunderKey/crystal-dirwatch/Dirwatch/UserFriendlyException" data-name="dirwatch::userfriendlyexception">
+      <a href="../Dirwatch/UserFriendlyException.html">UserFriendlyException</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Dirwatch::UserFriendlyException
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Dirwatch/UserFriendlyException.html">Dirwatch::UserFriendlyException</a></li><li class="superclass">Exception</li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>An exception with a <code><a href="../Dirwatch/UserFriendlyException.html#readable_message%3AString-instance-method">#readable_message</a></code>, which can be given directly to the user.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/ThunderKey/crystal-dirwatch/blob/5404da9d53c052133717cac2c3cd7cdf97f42114/src/dirwatch/user_friendly_exception.cr#L2" target="_blank">dirwatch/user_friendly_exception.cr</a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28readable_message%2Ccause%3AException%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(readable_message, cause : Exception? = <span class="n">nil</span>)</a>
+        
+          <div class="summary"><p>Creates a <code><a href="../Dirwatch/UserFriendlyException.html">UserFriendlyException</a></code> with a <code><a href="../Dirwatch/UserFriendlyException.html#readable_message%3AString-instance-method">#readable_message</a></code> and an optional <code>cause</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28readable_message%2Cinternal_message%3AString%2Ccause%3AException%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(readable_message, internal_message : String, cause : Exception? = <span class="n">nil</span>)</a>
+        
+          <div class="summary"><p>Creates a <code><a href="../Dirwatch/UserFriendlyException.html">UserFriendlyException</a></code> with a <code><a href="../Dirwatch/UserFriendlyException.html#readable_message%3AString-instance-method">#readable_message</a></code>, an additional <code>message</code> for internal usage and an optional <code>cause</code>.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#readable_message%3AString-instance-method" class="signature"><strong>#readable_message</strong> : String</a>
+        
+          <div class="summary"><p>The message meant for the user.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(readable_message,cause:Exception?=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(readable_message, cause : Exception? = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new%28readable_message%2Ccause%3AException%3F%3Dnil%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates a <code><a href="../Dirwatch/UserFriendlyException.html">UserFriendlyException</a></code> with a <code><a href="../Dirwatch/UserFriendlyException.html#readable_message%3AString-instance-method">#readable_message</a></code> and an optional <code>cause</code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/ThunderKey/crystal-dirwatch/blob/5404da9d53c052133717cac2c3cd7cdf97f42114/src/dirwatch/user_friendly_exception.cr#L8" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(readable_message,internal_message:String,cause:Exception?=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(readable_message, internal_message : String, cause : Exception? = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new%28readable_message%2Cinternal_message%3AString%2Ccause%3AException%3F%3Dnil%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates a <code><a href="../Dirwatch/UserFriendlyException.html">UserFriendlyException</a></code> with a <code><a href="../Dirwatch/UserFriendlyException.html#readable_message%3AString-instance-method">#readable_message</a></code>, an additional <code>message</code> for internal usage and an optional <code>cause</code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/ThunderKey/crystal-dirwatch/blob/5404da9d53c052133717cac2c3cd7cdf97f42114/src/dirwatch/user_friendly_exception.cr#L13" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="readable_message:String-instance-method">
+      <div class="signature">
+        
+        def <strong>readable_message</strong> : String
+
+        <a class="method-permalink" href="#readable_message%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>The message meant for the user.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/ThunderKey/crystal-dirwatch/blob/5404da9d53c052133717cac2c3cd7cdf97f42114/src/dirwatch/user_friendly_exception.cr#L4" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
