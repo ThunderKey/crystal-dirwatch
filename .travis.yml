@@ -1,7 +1,7 @@
 language: crystal
 script:
   - crystal spec
-  - crystal tool format --check
+  - ./bin/crystal_format.sh --check
   - crystal docs
 deploy:
   provider: pages
