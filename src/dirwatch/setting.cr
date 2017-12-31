@@ -1,14 +1,21 @@
 require "yaml"
 
 # This represents a specific setting for a dirwatch task.
-class Dirwatch::Setting
+struct Dirwatch::Setting
   # Global defaults that are used if they are not specified.
   GLOBAL_DEFAULTS = {
     "directory" => ".",
     "interval"  => 1,
   }
 
-  # Read the configuration of the given filename (YAML) and return a list of all Setting
+  # Read the configuration of the given filename (YAML) and return a list of all settings.
+  #
+  # See `from_yaml`.
+  def self.from_file(filename)
+    from_yaml File.read(filename)
+  end
+
+  # Read the configuration of the given YAML string and return a list of all settings.
   #
   # Example of a file:
   # ```yaml
@@ -47,8 +54,9 @@ class Dirwatch::Setting
   #   >
   # ]
   # ```
-  def self.from_file(filename)
-    yaml = YAML.parse File.read(filename)
+  def self.from_yaml(yaml_content)
+    puts "in from_yaml"
+    yaml = YAML.parse yaml_content
     defaults = yaml["defaults"]?
     defaults = GLOBAL_DEFAULTS.merge(defaults ? defaults.as_h : {} of YAML::Type => YAML::Type)
 
@@ -87,6 +95,8 @@ class Dirwatch::Setting
     raise UserFriendlyException.new "Required setting #{key.inspect} is missing" if value.nil?
     raise UserFriendlyException.new "The setting #{key.inspect} must be an integer and not #{value.inspect}"
   end
+
+  getter :key, :directory, :file_match, :interval, :scripts
 
   # Creates a new `Dirwatch::Setting` with this specific options.
   def initialize(@key : String, @directory : String, @file_match : String, @interval : Float64, @scripts : Array(String))
