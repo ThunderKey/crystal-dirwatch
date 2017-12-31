@@ -5,7 +5,7 @@ class Dirwatch::Setting
   # Global defaults that are used if they are not specified.
   GLOBAL_DEFAULTS = {
     "directory" => ".",
-    "interval" => 1,
+    "interval"  => 1,
   }
 
   # Read the configuration of the given filename (YAML) and return a list of all Setting
@@ -75,7 +75,7 @@ class Dirwatch::Setting
   private def self.to_string_array(value : YAML::Type | Int32, key)
     return [value] if value.is_a? String
     if value.is_a? Array
-      return value.map {|v| to_string v, key }
+      return value.map { |v| to_string v, key }
     end
     raise UserFriendlyException.new "Required setting #{key.inspect} is missing" if value.nil?
     raise UserFriendlyException.new "The setting #{key.inspect} must be a string or array and not #{value.inspect}"
