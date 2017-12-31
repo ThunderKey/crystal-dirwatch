@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/ThunderKey/crystal-dirwatch">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <title>Dirwatch::Setting - github.com/ThunderKey/crystal-dirwatch</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/ThunderKey/crystal-dirwatch/Dirwatch" data-name="dirwatch">
+      <a href="../Dirwatch.html">Dirwatch</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="github.com/ThunderKey/crystal-dirwatch/Dirwatch/Setting" data-name="dirwatch::setting">
+      <a href="../Dirwatch/Setting.html">Setting</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ThunderKey/crystal-dirwatch/Dirwatch/UserFriendlyException" data-name="dirwatch::userfriendlyexception">
+      <a href="../Dirwatch/UserFriendlyException.html">UserFriendlyException</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">struct</span> Dirwatch::Setting
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Dirwatch/Setting.html">Dirwatch::Setting</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>This represents a specific setting for a dirwatch task.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/ThunderKey/crystal-dirwatch/blob/2a196275f10868c50ad222b2f44cd448d25c4982/src/dirwatch/setting.cr#L4" target="_blank">dirwatch/setting.cr</a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>Constant Summary</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="GLOBAL_DEFAULTS">
+        <strong>GLOBAL_DEFAULTS</strong> = <code>{<span class="s">&quot;directory&quot;</span> => <span class="s">&quot;.&quot;</span>, <span class="s">&quot;interval&quot;</span> => <span class="n">1</span>}</code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Global defaults that are used if they are not specified.</p>
+      </dd>
+      
+    
+  </dl>
+
+
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28key%3AString%2Cdirectory%3AString%2Cfile_match%3AString%2Cinterval%3AFloat64%2Cscripts%3AArray%28String%29%29-class-method" class="signature"><strong>.new</strong>(key : String, directory : String, file_match : String, interval : Float64, scripts : Array(String))</a>
+        
+          <div class="summary"><p>Creates a new <code><a href="../Dirwatch/Setting.html">Dirwatch::Setting</a></code> with this specific options.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Class Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#from_file%28filename%29-class-method" class="signature"><strong>.from_file</strong>(filename)</a>
+        
+          <div class="summary"><p>Read the configuration of the given filename (YAML) and return a list of all settings.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#from_yaml%28yaml_content%29-class-method" class="signature"><strong>.from_yaml</strong>(yaml_content)</a>
+        
+          <div class="summary"><p>Read the configuration of the given YAML string and return a list of all settings.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#directory%3AString-instance-method" class="signature"><strong>#directory</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#file_match%3AString-instance-method" class="signature"><strong>#file_match</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#interval%3AFloat64-instance-method" class="signature"><strong>#interval</strong> : Float64</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#key%3AString-instance-method" class="signature"><strong>#key</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#scripts%3AArray%28String%29-instance-method" class="signature"><strong>#scripts</strong> : Array(String)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(key:String,directory:String,file_match:String,interval:Float64,scripts:Array(String))-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(key : String, directory : String, file_match : String, interval : Float64, scripts : Array(String))
+
+        <a class="method-permalink" href="#new%28key%3AString%2Cdirectory%3AString%2Cfile_match%3AString%2Cinterval%3AFloat64%2Cscripts%3AArray%28String%29%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates a new <code><a href="../Dirwatch/Setting.html">Dirwatch::Setting</a></code> with this specific options.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/ThunderKey/crystal-dirwatch/blob/2a196275f10868c50ad222b2f44cd448d25c4982/src/dirwatch/setting.cr#L102" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>Class Method Detail</h2>
+  
+    <div class="entry-detail" id="from_file(filename)-class-method">
+      <div class="signature">
+        
+        def self.<strong>from_file</strong>(filename)
+
+        <a class="method-permalink" href="#from_file%28filename%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Read the configuration of the given filename (YAML) and return a list of all settings.</p>
+
+<p>See <code><a href="../Dirwatch/Setting.html#from_yaml%28yaml_content%29-class-method">.from_yaml</a></code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/ThunderKey/crystal-dirwatch/blob/2a196275f10868c50ad222b2f44cd448d25c4982/src/dirwatch/setting.cr#L14" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="from_yaml(yaml_content)-class-method">
+      <div class="signature">
+        
+        def self.<strong>from_yaml</strong>(yaml_content)
+
+        <a class="method-permalink" href="#from_yaml%28yaml_content%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Read the configuration of the given YAML string and return a list of all settings.</p>
+
+<p>Example of a file:</p>
+
+<pre><code class='language-yaml'>defaults:
+  interval: 1
+
+my-task-1:
+  file_match: "*.txt"
+  script: "echo file changed >> txt.log"
+
+my-task-2:
+  interval: 5
+  directory: folder/to/csv/files
+  file_match: "*.csv"
+  script:
+    - "echo CSV >> csv.log"
+    - "echo file changed >> csv.log"</code></pre>
+
+<p>Which will return an array like:</p>
+
+<pre><code>[
+  <span class="c">#&lt;Dirwatch::Setting</span>
+    @key<span class="o">=</span><span class="s">&quot;my-task-1&quot;</span>,
+    @directory<span class="o">=</span><span class="s">&quot;.&quot;</span>,
+    @file_match<span class="o">=</span><span class="s">&quot;*.txt&quot;</span>,
+    @interval<span class="o">=</span><span class="n">2.0</span>,
+    @scripts<span class="o">=</span>[<span class="s">&quot;echo file changed &gt;&gt; txt.log&quot;</span>]
+  <span class="o">></span>,
+  <span class="c">#&lt;Dirwatch::Setting</span>
+    @key<span class="o">=</span><span class="s">&quot;my-task-2&quot;</span>,
+    @directory<span class="o">=</span><span class="s">&quot;folder/to/csv/files&quot;</span>,
+    @file_match<span class="o">=</span><span class="s">&quot;*.csv&quot;</span>,
+    @interval<span class="o">=</span><span class="n">5.0</span>,
+    @scripts<span class="o">=</span>[<span class="s">&quot;echo CSV &gt;&gt; csv.log&quot;</span>, <span class="s">&quot;echo file changed &gt;&gt; csv.log&quot;</span>]
+  <span class="o">></span>
+]</code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/ThunderKey/crystal-dirwatch/blob/2a196275f10868c50ad222b2f44cd448d25c4982/src/dirwatch/setting.cr#L57" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="directory:String-instance-method">
+      <div class="signature">
+        
+        def <strong>directory</strong> : String
+
+        <a class="method-permalink" href="#directory%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/ThunderKey/crystal-dirwatch/blob/2a196275f10868c50ad222b2f44cd448d25c4982/src/dirwatch/setting.cr#L99" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="file_match:String-instance-method">
+      <div class="signature">
+        
+        def <strong>file_match</strong> : String
+
+        <a class="method-permalink" href="#file_match%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/ThunderKey/crystal-dirwatch/blob/2a196275f10868c50ad222b2f44cd448d25c4982/src/dirwatch/setting.cr#L99" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="interval:Float64-instance-method">
+      <div class="signature">
+        
+        def <strong>interval</strong> : Float64
+
+        <a class="method-permalink" href="#interval%3AFloat64-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/ThunderKey/crystal-dirwatch/blob/2a196275f10868c50ad222b2f44cd448d25c4982/src/dirwatch/setting.cr#L99" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="key:String-instance-method">
+      <div class="signature">
+        
+        def <strong>key</strong> : String
+
+        <a class="method-permalink" href="#key%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/ThunderKey/crystal-dirwatch/blob/2a196275f10868c50ad222b2f44cd448d25c4982/src/dirwatch/setting.cr#L99" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="scripts:Array(String)-instance-method">
+      <div class="signature">
+        
+        def <strong>scripts</strong> : Array(String)
+
+        <a class="method-permalink" href="#scripts%3AArray%28String%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/ThunderKey/crystal-dirwatch/blob/2a196275f10868c50ad222b2f44cd448d25c4982/src/dirwatch/setting.cr#L99" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
