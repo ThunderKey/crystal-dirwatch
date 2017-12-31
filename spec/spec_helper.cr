@@ -1,2 +1,8 @@
-require "spec"
+require "spec2"
+
 require "../src/dirwatch"
+
+Spec2.random_order
+
+# Show the result as a hierarchical list and not just dots
+Spec2.doc

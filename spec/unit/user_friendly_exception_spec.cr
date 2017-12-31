@@ -1,37 +1,37 @@
 require "../spec_helper"
 
-describe Dirwatch::UserFriendlyException do
+Spec2.describe Dirwatch::UserFriendlyException do
   context "without internal message" do
     it "uses the readable message without a cause" do
-      e = Dirwatch::UserFriendlyException.new "my readable message"
-      e.readable_message.should be "my readable message"
-      e.message.should be "my readable message"
-      e.cause.should be_nil
+      e = described_class.new "my readable message"
+      expect(e.readable_message).to be "my readable message"
+      expect(e.message).to be "my readable message"
+      expect(e.cause).to be_nil
     end
 
     it "uses the readable message with a cause" do
       cause = Exception.new "another one"
-      e = Dirwatch::UserFriendlyException.new "my readable message", cause
-      e.readable_message.should be "my readable message"
-      e.message.should be "my readable message"
-      e.cause.should be cause
+      e = described_class.new "my readable message", cause
+      expect(e.readable_message).to be "my readable message"
+      expect(e.message).to be "my readable message"
+      expect(e.cause).to be cause
     end
   end
 
   context "with internal message" do
     it "ignores the readable message without a cause" do
-      e = Dirwatch::UserFriendlyException.new "my readable message", "my internal message"
-      e.readable_message.should be "my readable message"
-      e.message.should be "my internal message"
-      e.cause.should be_nil
+      e = described_class.new "my readable message", "my internal message"
+      expect(e.readable_message).to be "my readable message"
+      expect(e.message).to be "my internal message"
+      expect(e.cause).to be_nil
     end
 
     it "ignores the readable message with a cause" do
       cause = Exception.new "another one"
-      e = Dirwatch::UserFriendlyException.new "my readable message", "my internal message", cause
-      e.readable_message.should be "my readable message"
-      e.message.should be "my internal message"
-      e.cause.should be cause
+      e = described_class.new "my readable message", "my internal message", cause
+      expect(e.readable_message).to be "my readable message"
+      expect(e.message).to be "my internal message"
+      expect(e.cause).to be cause
     end
   end
 end
