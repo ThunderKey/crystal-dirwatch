@@ -55,12 +55,12 @@ struct Dirwatch::Setting
   # ]
   # ```
   def self.from_yaml(yaml_content)
-    puts "in from_yaml"
     yaml = YAML.parse yaml_content
+    settings = [] of Setting
+    return settings if yaml.raw.nil?
     defaults = yaml["defaults"]?
     defaults = GLOBAL_DEFAULTS.merge(defaults ? defaults.as_h : {} of YAML::Type => YAML::Type)
 
-    settings = [] of Setting
     yaml.each do |k, d|
       next if k == "defaults"
       data = defaults.merge d.as_h
@@ -68,7 +68,7 @@ struct Dirwatch::Setting
         k.as_s,
         to_string(data["directory"]?, "directory"),
         to_string(data["file_match"]?, "directory"),
-        to_int(data["interval"]?, "interval"),
+        to_float(data["interval"]?, "interval"),
         to_string_array(data["script"]?, "scripts"),
       )
     end
@@ -90,8 +90,8 @@ struct Dirwatch::Setting
     raise UserFriendlyException.new "The setting #{key.inspect} must be a string or array and not #{value.inspect}"
   end
 
-  private def self.to_int(value : YAML::Type | Int32, key)
-    return value.to_f if value.is_a? Number
+  private def self.to_float(value : YAML::Type | Int32, key)
+    return value.to_f if value.is_a?(Number) || value.is_a?(String)
     raise UserFriendlyException.new "Required setting #{key.inspect} is missing" if value.nil?
     raise UserFriendlyException.new "The setting #{key.inspect} must be an integer and not #{value.inspect}"
   end

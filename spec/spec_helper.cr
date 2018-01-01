@@ -7,4 +7,4 @@ require "./support/*"
 Spec2.random_order
 
 # Show the result as a hierarchical list and not just dots
-Spec2.doc
+Spec2.configure_reporter ImprovedDocReporter
